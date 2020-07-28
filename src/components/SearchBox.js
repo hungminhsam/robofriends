@@ -1,19 +1,23 @@
 import React from "react";
-// import { connect } from "react-redux";
-// import { setSearchField } from "../redux/actions";
+import { connect } from "react-redux";
+import { changeSearchText } from "../redux/actions";
 
-const SearchBox = (props) => {
+const SearchBox = ({ searchText, changeSearchText }) => {
   return (
     <div className="pa2">
       <input
         className="pa3 ba b-green bg-lightest-blue"
         type="search"
         placeholder="Search Robots"
-        onChange={(e) => props.onChange(e.target.value.trim())}
+        value={searchText}
+        onChange={(e) => changeSearchText(e.target.value.trim())}
       />
     </div>
   );
 };
 
-// export default connect(null, { setSearchField })(SearchBox);
-export default SearchBox;
+const mapStateToProps = (state, ownProps) => {
+  return { searchText: state.searchText };
+};
+
+export default connect(mapStateToProps, { changeSearchText })(SearchBox);
