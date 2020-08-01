@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CountButton /> expect to render CountButton Component 1`] = `
+"<button onClick={[Function: onClick]}>
+  Click count : 
+  0
+   
+</button>"
+`;

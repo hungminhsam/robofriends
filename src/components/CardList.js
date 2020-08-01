@@ -4,7 +4,7 @@ import { fetchRobots } from "../redux/actions";
 import Card from "./Card";
 import ErrorBoundary from "./ErrorBoundary";
 
-const CardList = ({ fetchRobots, robots, searchText }) => {
+export const CardList = ({ fetchRobots, robots, searchText }) => {
   useEffect(() => {
     fetchRobots();
   }, [fetchRobots]);

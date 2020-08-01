@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { changeSearchText } from "../redux/actions";
 
-const SearchBox = ({ searchText, changeSearchText }) => {
+export const SearchBox = ({ searchText, changeSearchText }) => {
   return (
     <div className="pa2">
       <input

@@ -16,7 +16,7 @@ const initialState = {
   },
 };
 
-const searchTextReducer = (state = initialState.searchText, action) => {
+export const searchTextReducer = (state = initialState.searchText, action) => {
   switch (action.type) {
     case CHANGE_SEARCH_TEXT:
       return action.payload;
@@ -25,7 +25,7 @@ const searchTextReducer = (state = initialState.searchText, action) => {
   }
 };
 
-const robotsReducer = (state = initialState.robots, action) => {
+export const robotsReducer = (state = initialState.robots, action) => {
   switch (action.type) {
     case FETCH_ROBOTS_PENDING:
       return { ...state, isPending: true };
